@@ -7,289 +7,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --bg: #FAFAF8;
-            --text: #1a1a1a;
-            --text-light: #666;
-            --accent: #E85A5A;
-            --border: #e5e5e0;
-        }
-
-        html {
-            font-size: 18px;
-        }
-
-        body {
-            font-family: 'DM Sans', sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.7;
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 80px 40px;
-        }
-
-        header {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-bottom: 100px;
-            animation: fadeIn 0.8s ease-out;
-        }
-
-        .logo {
-            width: 48px;
-            height: 48px;
-            object-fit: contain;
-        }
-
-        .site-title {
-            font-family: 'Cormorant', serif;
-            font-size: 1.4rem;
-            font-weight: 400;
-            letter-spacing: 0.02em;
-        }
-
-        .main-content {
-            display: grid;
-            grid-template-columns: 320px 1fr;
-            gap: 80px;
-            align-items: start;
-        }
-
-        .photo-container {
-            animation: fadeIn 1s ease-out 0.2s both;
-        }
-
-        .photo {
-            width: 100%;
-            aspect-ratio: 1;
-            object-fit: cover;
-            border-radius: 4px;
-            filter: grayscale(15%);
-            transition: filter 0.4s ease;
-        }
-
-        .photo:hover {
-            filter: grayscale(0%);
-        }
-
-        .bio {
-            animation: fadeIn 1s ease-out 0.4s both;
-        }
-
-        .greeting {
-            font-family: 'Cormorant', serif;
-            font-size: 3rem;
-            font-weight: 400;
-            line-height: 1.2;
-            margin-bottom: 40px;
-            letter-spacing: -0.02em;
-        }
-
-        .bio-text {
-            color: var(--text-light);
-            margin-bottom: 24px;
-            max-width: 540px;
-        }
-
-        .bio-text a {
-            color: var(--text);
-            text-decoration: underline;
-            text-decoration-color: var(--border);
-            text-underline-offset: 3px;
-            transition: text-decoration-color 0.3s ease;
-        }
-
-        .bio-text a:hover {
-            text-decoration-color: var(--accent);
-        }
-
-        .divider {
-            width: 40px;
-            height: 1px;
-            background: var(--border);
-            margin: 48px 0;
-        }
-
-        .current {
-            margin-bottom: 48px;
-        }
-
-        .section-label {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--text-light);
-            margin-bottom: 16px;
-        }
-
-        .role {
-            margin-bottom: 12px;
-        }
-
-        .role-title {
-            font-family: 'Cormorant', serif;
-            font-size: 1.3rem;
-            font-weight: 500;
-        }
-
-        .role-company {
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-
-        .links {
-            display: flex;
-            gap: 32px;
-            margin-top: 48px;
-        }
-
-        .link {
-            font-size: 0.85rem;
-            color: var(--text);
-            text-decoration: none;
-            padding-bottom: 2px;
-            border-bottom: 1px solid var(--border);
-            transition: border-color 0.3s ease;
-        }
-
-        .link:hover {
-            border-color: var(--accent);
-        }
-
-        footer {
-            margin-top: 120px;
-            padding-top: 40px;
-            border-top: 1px solid var(--border);
-            animation: fadeIn 1s ease-out 0.6s both;
-        }
-
-        .location {
-            font-size: 0.85rem;
-            color: var(--text-light);
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 800px) {
-            html {
-                font-size: 16px;
-            }
-
-            .container {
-                padding: 60px 24px;
-            }
-
-            header {
-                margin-bottom: 60px;
-            }
-
-            .main-content {
-                grid-template-columns: 1fr;
-                gap: 48px;
-            }
-
-            .photo-container {
-                max-width: 280px;
-            }
-
-            .greeting {
-                font-size: 2.4rem;
-                margin-bottom: 32px;
-            }
-
-            .links {
-                flex-direction: column;
-                gap: 16px;
-            }
-
-            footer {
-                margin-top: 80px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <header>
-            <img src="raspberry-logo.jpeg" alt="Raspberry" class="logo">
-            <span class="site-title">Alex Farcet</span>
-        </header>
-
-        <main class="main-content">
-            <div class="photo-container">
-                <img src="alex-photo.jpg" alt="Alex Farcet" class="photo">
+        <main class="home">
+            <div class="home-logo">
+                <img src="raspberry-logo.jpeg" alt="Alex Farcet" class="logo-large">
             </div>
 
-            <div class="bio">
-                <h1 class="greeting">Hello, I'm Alex.</h1>
-                
-                <p class="bio-text">
-                    French by passport, born in Spain, raised across Africa. I attended 
-                    <a href="https://www.summerhillschool.co.uk/" target="_blank">Summerhill School</a> — 
-                    the original free school — which shaped how I think about autonomy and learning.
-                </p>
-                
-                <p class="bio-text">
-                    I spent a decade at DHL, then moved to Silicon Valley during the early internet days. 
-                    In 2010, I co-founded <a href="https://www.startupbootcamp.org/" target="_blank">Startupbootcamp</a>, 
-                    which became one of the world's largest accelerator networks. That led to 
-                    <a href="https://rainmaking.io/" target="_blank">Rainmaking</a>, helping corporates and 
-                    startups work together on innovation.
-                </p>
+            <h1 class="home-greeting">Hello, I'm Alex.<br><span class="home-sub">Based in Lisbon.</span></h1>
 
-                <p class="bio-text">
-                    These days I split my time between two things I find meaningful: backing founders 
-                    building climate and AI solutions, and helping families navigate complex real estate transitions.
-                </p>
+            <nav class="home-nav">
+                <a href="bio.html" class="nav-link">Bio</a>
+                <a href="anti-algorithm.html" class="nav-link">Anti-algorithm <span class="soon">soon</span></a>
+                <a href="music.html" class="nav-link">Music <span class="soon">soon</span></a>
+                <a href="pictures.html" class="nav-link">Pictures <span class="soon">soon</span></a>
+                <a href="tests.html" class="nav-link">Tests <span class="soon">soon</span></a>
+            </nav>
 
-                <div class="divider"></div>
-
-                <div class="current">
-                    <p class="section-label">Current</p>
-                    
-                    <div class="role">
-                        <p class="role-title">ClimateTech & AI Investing</p>
-                        <p class="role-company">Raspberry Ventures</p>
-                    </div>
-                    
-                    <div class="role">
-                        <p class="role-title">Sell-side M&A, Real Estate</p>
-                        <p class="role-company">Mendez Nassau</p>
-                    </div>
-                </div>
-
-                <div class="links">
-                    <a href="https://www.linkedin.com/in/alexfarcet/" target="_blank" class="link">LinkedIn</a>
-                    <a href="https://raspberry.ventures" target="_blank" class="link">Raspberry Ventures</a>
-                </div>
+            <div class="home-links">
+                <a href="https://www.linkedin.com/in/alexfarcet/" target="_blank" class="ext-link">LinkedIn</a>
+                <a href="https://raspberry.ventures" target="_blank" class="ext-link">Raspberry Ventures</a>
             </div>
         </main>
-
-        <footer>
-            <p class="location">Lisbon, Portugal</p>
-        </footer>
     </div>
 </body>
 </html>

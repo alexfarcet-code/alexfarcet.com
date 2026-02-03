@@ -125,6 +125,7 @@ body {
 header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 16px;
     margin-bottom: 80px;
     animation: fadeIn 0.8s ease-out;
@@ -136,6 +137,29 @@ header a {
     gap: 16px;
     text-decoration: none;
     color: var(--text);
+}
+
+.page-nav {
+    display: flex;
+    gap: 24px;
+}
+
+.page-nav .nav-link {
+    color: var(--border);
+}
+
+.page-nav .nav-link:hover {
+    color: var(--text-light);
+}
+
+.page-nav .nav-link-active {
+    color: var(--text);
+    border-bottom-color: transparent;
+}
+
+.page-nav .nav-link-active:hover {
+    color: var(--text);
+    border-bottom-color: transparent;
 }
 
 .logo-small {
@@ -601,6 +625,15 @@ footer {
 
     header {
         margin-bottom: 48px;
+        flex-wrap: wrap;
+    }
+
+    .page-nav {
+        gap: 16px;
+    }
+
+    .page-nav .nav-link {
+        font-size: 0.8rem;
     }
 
     .page-content {

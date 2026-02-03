@@ -271,6 +271,91 @@ footer {
 }
 
 /* ========================
+   PICTURES PAGE
+   ======================== */
+
+.pictures-page {
+    max-width: 720px;
+    margin: 0 auto;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.pictures-title {
+    font-family: 'Cormorant', serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 48px;
+    letter-spacing: -0.02em;
+}
+
+.featured-photos {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+}
+
+.featured-photo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.featured-photo img {
+    max-width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+    display: block;
+    border-radius: 4px;
+}
+
+.thumbnail-section {
+    position: relative;
+    margin-top: 8px;
+}
+
+.thumbnail-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.thumbnail {
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.thumbnail-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70%;
+    background: linear-gradient(to bottom, transparent 0%, var(--bg) 100%);
+    pointer-events: none;
+}
+
+.more-coming {
+    position: absolute;
+    bottom: 24px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: 'Cormorant', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--text-light);
+}
+
+/* ========================
    ANIMATIONS
    ======================== */
 
@@ -342,5 +427,14 @@ footer {
 
     footer {
         margin-top: 64px;
+    }
+
+    .featured-photos {
+        gap: 40px;
+    }
+
+    .thumbnail-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
     }
 }

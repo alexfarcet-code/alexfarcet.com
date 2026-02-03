@@ -34,20 +34,43 @@ body {
    HOME PAGE
    ======================== */
 
-.home-topnav {
+/* ========================
+   LEFT SIDE NAVIGATION
+   ======================== */
+
+.side-nav {
+    position: fixed;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
-    justify-content: flex-end;
-    gap: 28px;
-    margin-bottom: 0;
+    flex-direction: column;
+    gap: 16px;
     animation: fadeIn 0.8s ease-out;
+    z-index: 10;
 }
 
-.home-topnav .nav-link {
+.side-nav .nav-link {
     color: var(--border);
+    font-size: 0.8rem;
 }
 
-.home-topnav .nav-link:hover {
+.side-nav-home .nav-link {
+    color: var(--text);
+}
+
+.side-nav .nav-link:hover {
     color: var(--text-light);
+}
+
+.side-nav .nav-link-active {
+    color: var(--text);
+    border-bottom-color: transparent;
+}
+
+.side-nav .nav-link-active:hover {
+    color: var(--text);
+    border-bottom-color: transparent;
 }
 
 .home {
@@ -63,7 +86,7 @@ body {
 .home-nameplate {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 4px;
     margin-top: 24px;
     margin-bottom: 32px;
 }
@@ -97,12 +120,13 @@ body {
 
 /* Currently section */
 .home-currently {
+    margin-top: 16px;
     margin-bottom: 48px;
     text-align: center;
 }
 
 .home-currently .section-label {
-    margin-bottom: 12px;
+    margin-bottom: 4px;
 }
 
 .currently-text {
@@ -167,7 +191,6 @@ body {
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 16px;
     margin-bottom: 80px;
     animation: fadeIn 0.8s ease-out;
@@ -179,29 +202,6 @@ header a {
     gap: 16px;
     text-decoration: none;
     color: var(--text);
-}
-
-.page-nav {
-    display: flex;
-    gap: 24px;
-}
-
-.page-nav .nav-link {
-    color: var(--border);
-}
-
-.page-nav .nav-link:hover {
-    color: var(--text-light);
-}
-
-.page-nav .nav-link-active {
-    color: var(--text);
-    border-bottom-color: transparent;
-}
-
-.page-nav .nav-link-active:hover {
-    color: var(--text);
-    border-bottom-color: transparent;
 }
 
 .logo-small {
@@ -795,15 +795,17 @@ footer {
 
     header {
         margin-bottom: 48px;
+    }
+
+    .side-nav {
+        position: static;
+        transform: none;
+        flex-direction: row;
+        justify-content: center;
         flex-wrap: wrap;
-    }
-
-    .page-nav {
         gap: 16px;
-    }
-
-    .page-nav .nav-link {
-        font-size: 0.8rem;
+        padding: 24px 24px 0;
+        margin-bottom: -36px;
     }
 
     .page-content {
@@ -817,13 +819,6 @@ footer {
 
     .page-photo {
         max-width: 240px;
-    }
-
-    .home-topnav {
-        justify-content: center;
-        gap: 16px;
-        flex-wrap: wrap;
-        margin-bottom: 0;
     }
 
     .home-links {

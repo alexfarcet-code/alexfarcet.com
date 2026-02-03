@@ -22,11 +22,6 @@ body {
     color: var(--text);
     line-height: 1.7;
     min-height: 100vh;
-    cursor: url('cursor.svg') 4 4, default;
-}
-
-a, button, .nav-link, .ext-link, .account-card, .lp-cover img {
-    cursor: url('cursor.svg') 4 4, pointer;
 }
 
 .container {
@@ -86,7 +81,8 @@ a, button, .nav-link, .ext-link, .account-card, .lp-cover img {
 
 .home-sub {
     color: var(--text-light);
-    font-family: 'Caveat', cursive;
+    font-family: 'Cormorant', serif;
+    font-style: italic;
     font-size: 1.35rem;
     margin-bottom: 48px;
 }
@@ -101,21 +97,11 @@ a, button, .nav-link, .ext-link, .account-card, .lp-cover img {
     margin-bottom: 12px;
 }
 
-.currently-items {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.currently-item {
-    font-family: 'Caveat', cursive;
+.currently-text {
+    font-family: 'Cormorant', serif;
+    font-style: italic;
     font-size: 1.15rem;
     color: var(--text-light);
-}
-
-.currently-item em {
-    color: var(--text);
-    font-style: normal;
 }
 
 .nav-link {
@@ -282,7 +268,8 @@ header a {
 
 /* Pull quote */
 .pull-quote {
-    font-family: 'Caveat', cursive;
+    font-family: 'Cormorant', serif;
+    font-style: italic;
     font-size: 1.6rem;
     color: var(--text);
     line-height: 1.4;
@@ -332,8 +319,7 @@ footer {
 }
 
 .footer-text {
-    font-family: 'Caveat', cursive;
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: var(--text-light);
 }
 
@@ -443,7 +429,8 @@ footer {
     right: 0;
     padding: 24px 12px 12px;
     background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 100%);
-    font-family: 'Caveat', cursive;
+    font-family: 'Cormorant', serif;
+    font-style: italic;
     font-size: 1rem;
     color: #fff;
     opacity: 0;
@@ -523,8 +510,6 @@ footer {
 }
 
 .algo-intro {
-    font-family: 'Caveat', cursive;
-    font-size: 1.15rem;
     color: var(--text-light);
     margin-bottom: 56px;
     max-width: 480px;
@@ -673,7 +658,8 @@ footer {
 }
 
 .lp-note {
-    font-family: 'Caveat', cursive;
+    font-family: 'Cormorant', serif;
+    font-style: italic;
     font-size: 1.15rem;
     color: var(--text);
     line-height: 1.5;

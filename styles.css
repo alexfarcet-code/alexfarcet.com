@@ -52,8 +52,11 @@ body {
     animation: fadeIn 0.8s ease-out;
 }
 
-.home-logo {
-    margin-bottom: 48px;
+.home-nameplate {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 32px;
 }
 
 .logo-large {
@@ -68,12 +71,13 @@ body {
     font-weight: 400;
     line-height: 1.3;
     letter-spacing: -0.02em;
-    margin-bottom: 56px;
 }
 
 .home-sub {
     color: var(--text-light);
+    font-family: 'Cormorant', serif;
     font-size: 1.8rem;
+    margin-bottom: 56px;
 }
 
 .nav-link {

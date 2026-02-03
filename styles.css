@@ -42,6 +42,14 @@ body {
     animation: fadeIn 0.8s ease-out;
 }
 
+.home-topnav .nav-link {
+    color: var(--border);
+}
+
+.home-topnav .nav-link:hover {
+    color: var(--text-light);
+}
+
 .home {
     display: flex;
     flex-direction: column;
@@ -82,9 +90,9 @@ body {
 .home-sub {
     color: var(--text-light);
     font-family: 'Cormorant', serif;
+    font-size: 1.4rem;
     font-style: italic;
-    font-size: 1.35rem;
-    margin-bottom: 48px;
+    margin-bottom: 56px;
 }
 
 /* Currently section */
